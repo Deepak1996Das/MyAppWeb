@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\user\.nuget\packages\datatables.net-dt\1.13.3\contentFiles\any\any\wwwroot\js\dataTables.dataTables.js" />
+    <Content Remove="C:\Users\user\.nuget\packages\datatables.net-dt\1.13.3\contentFiles\any\any\wwwroot\js\dataTables.dataTables.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="datatables.net-dt" Version="1.13.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.21" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.21" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.21">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyApp.DataAccessLayer\MyApp.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\MyApp.Models\MyApp.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\ProductImage\" />
+  </ItemGroup>
+
+</Project>

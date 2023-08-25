@@ -1,0 +1,33 @@
+﻿
+
+
+<div class="container p-4">
+    <div class="row p-2">
+        <div class="col-8"><h3>List of Product</h3></div>
+        <div class="col-4 text-end">
+            <a class="btn btn-primary" asp-area="Admin" asp-action="CreateUpdate" asp-controller="Product"><i class="bi bi-plus-circle-fill"></i>&nbsp;Create new Product</a>
+        </div>
+    </div>
+</div>
+
+<table id="myTable" class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Description</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Action</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+       
+
+    </tbody>
+
+</table>
+@section scripts{
+    <script src="~/js/product.js"></script>
+}
+

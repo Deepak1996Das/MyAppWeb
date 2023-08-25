@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyApp</title>
+    <link href="~/css/QuartzBootswatchThem.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <link rel="stylesheet" href="~/MyApp.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+   
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-opacity-50"  href="#">My App</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-area="Admin" asp-action="Index" asp-controller="Category">Category</a>
+                                <a class="dropdown-item" asp-area="Admin" asp-action="Index" asp-controller="Product">Product</a>
+
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </li>
+                    </ul>
+                    @*<form class="d-flex">
+                        <input class="form-control me-sm-2" type="search" placeholder="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>*@
+                </div>
+            </div>
+        </nav>
+
+
+       @* <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <img src="..." class="rounded me-2" alt="...">
+                    <strong class="me-auto">Bootstrap</strong>
+                    <small>11 mins ago</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Hello, world! This is a toast message.
+                </div>
+            </div>
+        </div>*@
+
+
+
+
+
+
+
+
+
+
+
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <partial name="_Notification"/>
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - MyApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/2c5ukwf4z59o2oau7pei9nxtldjqwgxuga9y9fjz33r3zqa6/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
